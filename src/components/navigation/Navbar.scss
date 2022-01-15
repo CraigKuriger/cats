@@ -1,0 +1,14 @@
+@import "~/src/common/_Variables.scss";
+
+nav.navbar {
+  font-weight: bold;
+
+  div.navbar-brand:hover,
+  li:hover {
+    cursor: pointer;
+  }
+
+  div.active-tab {
+    color: $primary !important;
+  }
+}
