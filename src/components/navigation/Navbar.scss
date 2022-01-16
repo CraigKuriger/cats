@@ -3,6 +3,12 @@
 nav.navbar {
   font-weight: bold;
 
+  div.navbar-brand {
+    i.fas {
+      color: $primary;
+    }
+  }
+
   div.navbar-brand:hover,
   li:hover {
     cursor: pointer;

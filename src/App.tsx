@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <TabManager activeTab={activeTab} />
+      <TabManager activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
 }

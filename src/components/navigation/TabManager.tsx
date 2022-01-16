@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
+import Landing from "../pages/Landing";
 import "./TabManager.scss";
+
+const TabWrapper: React.FC = (props) => {
+  return <div className="tab-wrapper">{props.children}</div>;
+};
 
 export type TAB_TYPES = "home" | "categories" | "breeds" | "about" | "contact";
 
 interface Props {
   activeTab: TAB_TYPES;
+  setActiveTab: (activeTab: TAB_TYPES) => void;
 }
 
 const TabManager: React.FC<Props> = (props) => {
-  const { activeTab } = props;
+  const { activeTab, setActiveTab } = props;
 
   useEffect(() => {
     //   Remove Bootrap mobile dropdown after when rendering (because no hyperlink is clicked)
@@ -18,33 +24,33 @@ const TabManager: React.FC<Props> = (props) => {
   switch (activeTab) {
     case "categories":
       return (
-        <div className="container px-4 px-lg-5 tab-manager">
+        <TabWrapper>
           <h1 className="text-center">Categories</h1>
-        </div>
+        </TabWrapper>
       );
     case "breeds":
       return (
-        <div className="container px-4 px-lg-5 tab-manager">
+        <TabWrapper>
           <h1 className="text-center">Breeds</h1>
-        </div>
+        </TabWrapper>
       );
     case "about":
       return (
-        <div className="container px-4 px-lg-5 tab-manager">
+        <TabWrapper>
           <h1 className="text-center">About</h1>
-        </div>
+        </TabWrapper>
       );
     case "contact":
       return (
-        <div className="container px-4 px-lg-5 tab-manager">
+        <TabWrapper>
           <h1 className="text-center">Contact</h1>
-        </div>
+        </TabWrapper>
       );
     default:
       return (
-        <div className="container px-4 px-lg-5 tab-manager">
-          <h1 className="text-center">Categories</h1>
-        </div>
+        <TabWrapper>
+          <Landing setActiveTab={setActiveTab} />
+        </TabWrapper>
       );
   }
 };

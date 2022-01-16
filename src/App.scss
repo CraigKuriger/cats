@@ -1,7 +1,26 @@
+@import "~/src/common/_Variables.scss";
+
 body {
   font-family: "Catamaran", sans-serif;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+.btn-primary {
+  background: $primary;
+  border-color: $primary;
+  &:hover {
+    background: darken($primary, 10);
+  }
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
 }

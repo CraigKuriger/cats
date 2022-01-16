@@ -1,0 +1,46 @@
+@import "~/src/common/_Variables.scss";
+
+header.landing {
+  background: url("~/public/images/landing.jpeg"),
+    linear-gradient(0deg, white 33%, black 66%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-blend-mode: luminosity;
+
+  div.welcome {
+    padding: 140px 0;
+  }
+}
+
+section.intro {
+  padding-top: 40px;
+
+  hr.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: $primary;
+    opacity: 1;
+  }
+
+  i.fas {
+    font-size: 32px;
+    color: $primary;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header.landing {
+    div.welcome {
+      width: 50%;
+      margin-right: 0;
+      padding: 20px 0 20px;
+    }
+
+    .btn-xl {
+      padding: 0.25rem 1.25rem;
+    }
+  }
+}

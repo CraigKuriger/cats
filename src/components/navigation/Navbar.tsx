@@ -22,7 +22,8 @@ const Navbar: React.FC<Props> = (props) => {
     >
       <div className="container px-4 px-lg-5">
         <div className="navbar-brand" onClick={() => setActiveTab("home")}>
-          Cat Mafia
+          <i className="fas fa-paw"></i>
+          <span>&nbsp;CAT MAFIA</span>
         </div>
         <button
           className="navbar-toggler navbar-toggler-right"
