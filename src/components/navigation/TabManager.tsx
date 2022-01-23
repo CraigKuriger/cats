@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Categories from "../pages/Categories";
 import Landing from "../pages/Landing";
 import "./TabManager.scss";
 
@@ -25,7 +26,7 @@ const TabManager: React.FC<Props> = (props) => {
     case "categories":
       return (
         <TabWrapper>
-          <h1 className="text-center">Categories</h1>
+          <Categories />
         </TabWrapper>
       );
     case "breeds":
