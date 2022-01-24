@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Breeds from "../pages/Breeds";
 import Categories from "../pages/Categories";
+import Gallery from "../pages/Gallery";
 import Landing from "../pages/Landing";
 import "./TabManager.scss";
 
@@ -8,7 +9,13 @@ const TabWrapper: React.FC = (props) => {
   return <div className="tab-wrapper">{props.children}</div>;
 };
 
-export type TAB_TYPES = "home" | "categories" | "breeds" | "about" | "contact";
+export type TAB_TYPES =
+  | "home"
+  | "gallery"
+  | "categories"
+  | "breeds"
+  | "about"
+  | "contact";
 
 interface Props {
   activeTab: TAB_TYPES;
@@ -18,12 +25,13 @@ interface Props {
 const TabManager: React.FC<Props> = (props) => {
   const { activeTab, setActiveTab } = props;
 
-  useEffect(() => {
-    //   Remove Bootrap mobile dropdown after when rendering (because no hyperlink is clicked)
-    document.getElementById("navbarResponsive")?.classList.remove("show");
-  });
-
   switch (activeTab) {
+    case "gallery":
+      return (
+        <TabWrapper>
+          <Gallery />
+        </TabWrapper>
+      );
     case "categories":
       return (
         <TabWrapper>

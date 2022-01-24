@@ -1,0 +1,31 @@
+@import "~/src/common/_Variables.scss";
+
+div.gallery {
+  div.gallery-box {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  div.gallery-box-caption {
+    position: relative;
+    display: block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    background: rgba($primary, 0.9);
+    transition: opacity 0.25s ease;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
