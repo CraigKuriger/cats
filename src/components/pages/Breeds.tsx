@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL } from "../../common/helpers";
+import Spinner from "../Spinner";
 
 interface Breed {
   dog_friendly: number;
@@ -17,6 +18,10 @@ const Breeds: React.FC = () => {
       setBreeds(response.data);
     });
   }, []);
+
+  if (breeds.length === 0) {
+    return <Spinner />;
+  }
 
   return (
     <div className="categories container px-4 px-lg-5">

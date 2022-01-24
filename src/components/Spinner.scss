@@ -1,0 +1,12 @@
+@import "~/src/common/_Variables.scss";
+
+div.spinner {
+  height: 100vh;
+  padding-top: 40px;
+  div.spinner-border {
+    border-color: $primary;
+    border-right-color: transparent;
+    height: 50px;
+    width: 50px;
+  }
+}

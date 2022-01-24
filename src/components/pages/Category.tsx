@@ -27,11 +27,7 @@ const Category: React.FC<Props> = (props) => {
   return (
     <div className="category col-lg-4 col-sm-6 text-center">
       <div className="card">
-        <img
-          className="img-fluid card-img-top"
-          src={imageUrl}
-          alt={category.name}
-        />
+        <img className="img-fluid card-img-top" src={imageUrl} alt="" />
         <div className="card-body">
           <h4 className="card-title text-capitalize">{category.name}</h4>
         </div>

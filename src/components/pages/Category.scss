@@ -4,5 +4,13 @@ div.category {
     width: 100%;
     height: 220px;
     object-fit: cover;
+
+    background: url("~/src/images/landing.jpeg"),
+      linear-gradient(0deg, white 33%, black 66%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-blend-mode: luminosity;
   }
 }

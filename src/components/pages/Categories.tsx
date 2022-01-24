@@ -3,6 +3,7 @@ import axios from "axios";
 import Category from "./Category";
 import { baseURL } from "../../common/helpers";
 import "./Categories.scss";
+import Spinner from "../Spinner";
 
 const Categories: React.FC = () => {
   const [categories, setCategories] = useState([]);
@@ -12,6 +13,10 @@ const Categories: React.FC = () => {
       setCategories(response.data);
     });
   }, []);
+
+  if (categories.length === 0) {
+    return <Spinner />;
+  }
 
   return (
     <div className="categories container px-4 px-lg-5">

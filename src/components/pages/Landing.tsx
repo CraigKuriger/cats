@@ -1,4 +1,5 @@
 import React from "react";
+import Pizza from "../charts/Charts";
 import { TAB_TYPES } from "../navigation/TabManager";
 import "./Landing.scss";
 
@@ -75,6 +76,7 @@ const Landing: React.FC<Props> = (props) => {
           </div>
         </div>
       </section>
+      <Pizza />
     </>
   );
 };

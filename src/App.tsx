@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/navigation/Navbar";
 import "./App.scss";
 import TabManager, { TAB_TYPES } from "./components/navigation/TabManager";
+import Footer from "./components/navigation/Footer";
 
 // React transitions for changing tab
 
@@ -18,6 +19,7 @@ function App() {
     <div>
       <Navbar activeTab={activeTab} setActiveTab={setActiveTabHandler} />
       <TabManager activeTab={activeTab} setActiveTab={setActiveTabHandler} />
+      <Footer />
     </div>
   );
 }
