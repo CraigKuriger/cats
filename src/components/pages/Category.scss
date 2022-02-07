@@ -1,3 +1,5 @@
+@import "~/src/common/_Variables.scss";
+
 div.category {
   margin-bottom: 24px;
   img.img-fluid {
@@ -12,5 +14,11 @@ div.category {
     background-attachment: scroll;
     background-size: cover;
     background-blend-mode: luminosity;
+  }
+  div.card {
+    cursor: pointer;
+  }
+  i.fas {
+    color: $primary;
   }
 }

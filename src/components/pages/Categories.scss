@@ -1,1 +1,11 @@
+@import "~/src/common/_Variables.scss";
 
+div.categories {
+  div.nav-link {
+    color: rgb(33, 37, 41);
+    cursor: pointer;
+  }
+  div.nav-link.active {
+    background: $primary;
+  }
+}
