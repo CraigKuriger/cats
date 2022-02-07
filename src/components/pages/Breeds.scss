@@ -1,0 +1,33 @@
+@import "~/src/common/_Variables.scss";
+
+div.breeds {
+  nav {
+    margin: 16px 0;
+  }
+
+  form.search {
+    width: 40%;
+    margin: auto;
+    input.form-control:focus {
+      border-color: $primary;
+      box-shadow: 0px 0px 1px $primary;
+    }
+  }
+
+  div.page-link {
+    cursor: pointer;
+    color: rgb(33, 37, 41);
+    &__active {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.breeds {
+    form.search {
+      width: 100%;
+    }
+  }
+}

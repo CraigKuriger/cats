@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTabHandler} />
       <TabManager activeTab={activeTab} setActiveTab={setActiveTabHandler} />
       <Footer />

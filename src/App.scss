@@ -4,8 +4,25 @@ body {
   font-family: "Catamaran", sans-serif;
 }
 
+div.app {
+  min-height: 100vh;
+  position: relative;
+}
+
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 40px 0;
+
+  hr.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: $primary;
+    opacity: 1;
+  }
 }
 
 .btn-primary {
@@ -23,16 +40,4 @@ p {
   text-transform: uppercase;
   border: none;
   border-radius: 10rem;
-}
-
-section {
-  padding: 40px 0;
-
-  hr.divider {
-    height: 0.2rem;
-    max-width: 3.25rem;
-    margin: 1.5rem auto;
-    background-color: $primary;
-    opacity: 1;
-  }
 }
