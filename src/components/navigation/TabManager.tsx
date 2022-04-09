@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Breeds from "../pages/Breeds";
 import Categories from "../pages/Categories";
 import Gallery from "../pages/Gallery";
@@ -9,13 +9,7 @@ const TabWrapper: React.FC = (props) => {
   return <div className="tab-wrapper">{props.children}</div>;
 };
 
-export type TAB_TYPES =
-  | "home"
-  | "gallery"
-  | "categories"
-  | "breeds"
-  | "about"
-  | "contact";
+export type TAB_TYPES = "home" | "gallery" | "categories" | "breeds" | "about";
 
 interface Props {
   activeTab: TAB_TYPES;
@@ -24,6 +18,10 @@ interface Props {
 
 const TabManager: React.FC<Props> = (props) => {
   const { activeTab, setActiveTab } = props;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeTab]);
 
   switch (activeTab) {
     case "gallery":
@@ -48,12 +46,6 @@ const TabManager: React.FC<Props> = (props) => {
       return (
         <TabWrapper>
           <h1 className="text-center">About</h1>
-        </TabWrapper>
-      );
-    case "contact":
-      return (
-        <TabWrapper>
-          <h1 className="text-center">Contact</h1>
         </TabWrapper>
       );
     default:

@@ -52,9 +52,6 @@ const Navbar: React.FC<Props> = (props) => {
             <li className="nav-item" onClick={() => setActiveTab("about")}>
               <div className={getLinkClass("about", activeTab)}>About</div>
             </li>
-            <li className="nav-item" onClick={() => setActiveTab("contact")}>
-              <div className={getLinkClass("contact", activeTab)}>Contact</div>
-            </li>
           </ul>
         </div>
       </div>
