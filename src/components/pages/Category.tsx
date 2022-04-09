@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Category.scss";
 
 const getIcon = (categoryId: number) => {
-  console.debug(categoryId);
   switch (categoryId) {
     case 5:
       return "fas fa-box-open";
@@ -30,19 +29,25 @@ interface Props {
 }
 
 const Category: React.FC<Props> = (props) => {
+  const [imageLoading, setImageLoading] = useState(true);
   const { categoryId, imageUrl } = props;
 
   return (
-    <div className="category col-lg-4 col-sm-6 text-center">
-      <div className="card" onClick={() => console.debug("Click")}>
-        <img className="img-fluid card-img-top" src={imageUrl} alt="" />
+    <>
+      <div className="card" style={imageLoading ? { display: "none" } : {}}>
+        <img
+          className="img-fluid card-img-top"
+          src={imageUrl}
+          alt=""
+          onLoad={() => setImageLoading(false)}
+        />
         <div className="card-body">
           <h4 className="card-title text-capitalize">
             <i className={getIcon(categoryId)}></i>
           </h4>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

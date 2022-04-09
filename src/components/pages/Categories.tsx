@@ -42,6 +42,7 @@ const Categories: React.FC = () => {
 
           return (
             <li
+              key={category.id}
               className="nav-item"
               onClick={() => {
                 setLoadingImages(true);
@@ -59,11 +60,16 @@ const Categories: React.FC = () => {
         <div className="row">
           {selectedCategoryImages.map((image) => {
             return (
-              <Category
-                categoryId={selectedCategoryId}
-                imageUrl={image.url}
-                onClickHandler={setSelectedCategoryId}
-              />
+              <div
+                className="category col-lg-4 col-sm-6 text-center"
+                key={image.url}
+              >
+                <Category
+                  categoryId={selectedCategoryId}
+                  imageUrl={image.url}
+                  onClickHandler={setSelectedCategoryId}
+                />
+              </div>
             );
           })}
         </div>
