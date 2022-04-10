@@ -1,0 +1,106 @@
+@import "~/src/common/_Variables.scss";
+
+div.about {
+  div.info-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+
+    section.info-item {
+      div.flex {
+        display: flex;
+      }
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      animation: itemRender 700ms ease-out;
+      animation-fill-mode: backwards;
+
+      &:nth-of-type(1) {
+        grid-area: one;
+        background: $primary;
+        color: white;
+        animation-delay: calc(1 * $stagger-delay);
+      }
+      &:nth-of-type(2) {
+        grid-area: two;
+        background: lighten($dark, 20%);
+        color: white;
+        animation-delay: calc(3 * $stagger-delay);
+      }
+      &:nth-of-type(3) {
+        grid-area: three;
+        animation-delay: calc(9 * $stagger-delay);
+      }
+      &:nth-of-type(4) {
+        grid-area: four;
+        background: $dark;
+        color: white;
+        animation-delay: calc(7 * $stagger-delay);
+      }
+      &:nth-of-type(5) {
+        grid-area: five;
+        animation-delay: calc(5 * $stagger-delay);
+      }
+
+      img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        &.border-neutral {
+          border: 2px solid $grey;
+        }
+
+        &.border-primary {
+          border: 2px solid $primary !important;
+        }
+
+        &.border-secondary {
+          border: 2px solid $dark !important;
+        }
+      }
+
+      p:first-of-type {
+        line-height: 1.2;
+      }
+
+      p:last-of-type {
+        opacity: 0.8;
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-template-areas:
+        "one one"
+        "two five"
+        "three five"
+        "four four";
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-areas:
+        "one one two five"
+        "three four four five";
+    }
+  }
+}
+
+@keyframes itemRender {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}

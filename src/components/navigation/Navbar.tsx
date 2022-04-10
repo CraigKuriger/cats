@@ -38,19 +38,19 @@ const Navbar: React.FC<Props> = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto my-2 my-lg-0">
+            <li className="nav-item" onClick={() => setActiveTab("about")}>
+              <div className={getLinkClass("about", activeTab)}>About</div>
+            </li>
             <li className="nav-item" onClick={() => setActiveTab("gallery")}>
               <div className={getLinkClass("gallery", activeTab)}>Gallery</div>
+            </li>
+            <li className="nav-item" onClick={() => setActiveTab("breeds")}>
+              <div className={getLinkClass("breeds", activeTab)}>Breeds</div>
             </li>
             <li className="nav-item" onClick={() => setActiveTab("categories")}>
               <div className={getLinkClass("categories", activeTab)}>
                 Categories
               </div>
-            </li>
-            <li className="nav-item" onClick={() => setActiveTab("breeds")}>
-              <div className={getLinkClass("breeds", activeTab)}>Breeds</div>
-            </li>
-            <li className="nav-item" onClick={() => setActiveTab("about")}>
-              <div className={getLinkClass("about", activeTab)}>About</div>
             </li>
           </ul>
         </div>

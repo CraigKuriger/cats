@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import About from "../pages/About";
 import Breeds from "../pages/Breeds";
 import Categories from "../pages/Categories";
 import Gallery from "../pages/Gallery";
@@ -45,7 +46,7 @@ const TabManager: React.FC<Props> = (props) => {
     case "about":
       return (
         <TabWrapper>
-          <h1 className="text-center">About</h1>
+          <About />
         </TabWrapper>
       );
     default:
