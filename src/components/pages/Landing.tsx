@@ -18,7 +18,7 @@ const Landing: React.FC<Props> = (props) => {
           <p className="text-white-75 mb-5">Welcome to the Cat Mafia.</p>
           <button
             className="btn btn-primary btn-xl"
-            onClick={() => setActiveTab("categories")}
+            onClick={() => setActiveTab("about")}
           >
             Find Out More
           </button>
