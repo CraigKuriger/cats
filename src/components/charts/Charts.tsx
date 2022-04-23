@@ -3,7 +3,6 @@ import {
   VictoryAxis,
   VictoryChart,
   VictoryClipContainer,
-  VictoryLegend,
   VictoryLine,
   VictoryPie,
 } from "victory";
@@ -11,7 +10,7 @@ import "./Charts.scss";
 
 const Charts: React.FC = () => {
   return (
-    <section className="Charts">
+    <section className="charts">
       <div className="container px-4 px-lg-5">
         <h2 className="text-center mt-0 fw-bold">Data</h2>
         <hr className="divider" />

@@ -1,0 +1,9 @@
+section.charts {
+  @media only screen and (max-width: 768px) {
+    div.VictoryContainer {
+      user-select: auto !important;
+      pointer-events: auto !important;
+      touch-action: auto !important;
+    }
+  }
+}
